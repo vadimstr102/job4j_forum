@@ -27,9 +27,14 @@
         <div class="col-5">
             <div class="card">
                 <div class="card-header">
-                    Тема
+                    <c:out value="${post.name}"/>
                 </div>
                 <div class="card-body">
+                    <ul>
+                        <li><c:out value="${post.description}"/></li>
+                        <li><c:out value="${post.created.time}"/></li>
+                    </ul>
+                    <a href="<c:url value='/update?id=${post.id}'/>" class="btn btn-primary btn-sm" role="button">Редактировать</a>
                 </div>
             </div>
         </div>

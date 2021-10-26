@@ -23,9 +23,12 @@
         integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous"></script>
 
 <div class="container pt-3">
-    <div class="row mb-3">
-        <div class="col">
+    <div class="row justify-content-between mb-3">
+        <div class="col-4">
             <h4>Форум job4j</h4>
+        </div>
+        <div class="col-4 text-end">
+            <a href="<c:url value='/create'/>" class="btn btn-primary btn-sm" role="button">Новая тема</a>
         </div>
     </div>
     <div class="row">
@@ -34,12 +37,18 @@
                 <thead>
                 <tr>
                     <th scope="col">Тема</th>
+                    <th scope="col">Дата создания</th>
                 </tr>
                 </thead>
                 <tbody>
                 <c:forEach items="${posts}" var="post">
                     <tr>
-                        <td><c:out value="${post.name}"/></td>
+                        <td>
+                            <a href="<c:url value="/get?id=${post.id}"/>"><c:out value="${post.name}"/></a>
+                        </td>
+                        <td>
+                            <c:out value="${post.created.time}"/>
+                        </td>
                     </tr>
                 </c:forEach>
                 </tbody>
