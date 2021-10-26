@@ -41,7 +41,7 @@
                         </div>
                         <div class="form-group">
                             <div class="d-grid gap-2">
-                                <button type="submit" class="btn btn-success">Зарегистрироваться</button>
+                                <button type="submit" class="btn btn-primary">Зарегистрироваться</button>
                             </div>
                         </div>
                         <c:if test="${not empty errorMessage}">

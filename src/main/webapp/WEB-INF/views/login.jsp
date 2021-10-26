@@ -41,8 +41,8 @@
                         </div>
                         <div class="form-group">
                             <div class="d-grid gap-2">
-                                <button type="submit" class="btn btn-success">Войти</button>
-                                <a href="<c:url value='/reg'/>" class="btn btn-success" role="button">Регистрация</a>
+                                <button type="submit" class="btn btn-primary">Войти</button>
+                                <a href="<c:url value='/reg'/>" class="btn btn-primary" role="button">Регистрация</a>
                             </div>
                         </div>
                         <c:if test="${not empty errorMessage}">
