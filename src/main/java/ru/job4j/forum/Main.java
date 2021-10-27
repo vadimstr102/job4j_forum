@@ -21,6 +21,7 @@ public class Main extends SpringBootServletInitializer {
         SpringLiquibase liquibase = new SpringLiquibase();
         liquibase.setChangeLog("classpath:liquibase-changeLog.xml");
         liquibase.setDataSource(ds);
+        liquibase.setClearCheckSums(true);
         return liquibase;
     }
 
