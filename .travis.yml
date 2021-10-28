@@ -6,6 +6,13 @@ jdk:
 # используем режим обычного пользователя для сборки проекта.
 sudo: false
 
+# перед сборкой создаём базу данных
+services:
+  - postgresql
+
+before_install:
+  - psql -c 'create database job4j_forum;' -U postgres
+
 # после выполнения сборки запустить скрипт, который будет собирать статистику по JaCoCo
 # Здесь используется сторонний сервис https://codecov.io/
 after_success:
